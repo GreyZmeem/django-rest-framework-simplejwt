@@ -31,17 +31,19 @@ DEFAULTS = {
     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+
+    'TOKEN_BACKEND_CLASS': 'rest_framework_simplejwt.backends.TokenBackend',
 }
 
 IMPORT_STRINGS = (
     'AUTH_TOKEN_CLASSES',
+    'TOKEN_BACKEND_CLASS',
 )
 
 REMOVED_SETTINGS = (
     'AUTH_HEADER_TYPE',
     'AUTH_TOKEN_CLASS',
     'SECRET_KEY',
-    'TOKEN_BACKEND_CLASS',
 )
 
 
